@@ -24,7 +24,7 @@ export const BackgroundEffect = ({ children }: BackgroundEffectProps) => {
 
   const movementFactor = 0.02;
 
-  const backgroundPosition = `right ${50 - scrollY * movementFactor}% top ${
+  const backgroundPosition = `right 0% top ${
     0 - scrollY * movementFactor
   }%`;
 
