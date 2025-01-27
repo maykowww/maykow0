@@ -1,4 +1,5 @@
 import React from "react";
+import { OpacityCard } from "./opacity-card";
 
 const About = () => {
   return (
@@ -12,22 +13,18 @@ const About = () => {
         <p className=" tracking-[0.5em] text-transparent font-light pb-5  bg-clip-text bg-gradient-to-r from-white to-rose-400  text-1xl">
           EXPLORE NOW
         </p>
-        <p className="text-gray-300 text-center ">
-          Hey there! I’m a full-stack developer driven by a passion for turning
-          ideas into amazing digital experiences. My journey is fueled by clean
-          code, jaw-dropping animations, and solutions that truly make an
-          impact. On the frontend, I craft modern and interactive interfaces
-          using React.js and Next.js – whether it’s a sleek animated menu or an
-          immersive 3D experience powered by Three.js. On the backend, I dive
-          deep with Node.js and Golang to build scalable, high-performance
-          systems that push the limits of innovation. I also love bringing apps
-          to life with Flutter, ensuring every pixel is in the right place,
-          every transition is smooth, and data flows seamlessly through GraphQL
-          or REST APIs. From futuristic websites to fully-fledged data
-          management systems, I’ve worked on projects that deliver results and
-          exceed expectations. Need something innovative, practical, and built
-          to impress? Let’s create something amazing together! 🚀
-        </p>
+        <OpacityCard>
+          <p className="text-gray-300 text-center ">
+            I’m a full-stack developer passionate about turning ideas into
+            impactful digital experiences. I craft modern, interactive
+            interfaces with React.js, Next.js, and Three.js, and build scalable
+            backends with Node.js and Golang. I also bring apps to life with
+            Flutter, ensuring smooth transitions and seamless data flow through
+            GraphQL or REST APIs. From immersive websites to robust data
+            systems, I deliver innovative solutions that exceed expectations.
+            Let’s build something amazing! 🚀
+          </p>
+        </OpacityCard>
       </div>
     </section>
   );

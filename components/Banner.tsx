@@ -2,11 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
+import { OpacityCard } from "./opacity-card";
 
 const Banner = () => {
   return (
     <div className="flex flex-row items-center justify-center px-20 mt-[100px] z-[20] ">
-      <div className="flex flex-col  justify-center  text-center">
+      <div className="flex flex-col gap-5 justify-center  text-center">
         <div className="justify-center flex ">
           <Image
             priority
@@ -35,11 +36,13 @@ const Banner = () => {
             alt="Ibrahim Memon"
           />
         </div>
-
-        <p className="text-md text-gray-200 my-5 max-w-[600px]">
-          Passionate Software Developer with knowledge in web and mobile development,
-          dedicated to crafting elegant and user-friendly mobile and web applications.
-        </p>
+        <OpacityCard>
+          <p className="text-md text-gray-200 my-5 max-w-[600px]">
+            Passionate Software Developer with knowledge in web and mobile
+            development, dedicated to crafting elegant and user-friendly mobile
+            and web applications.
+          </p>
+        </OpacityCard>
         <div className="text-md flex justify-center">
           <button
             type="button"

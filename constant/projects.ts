@@ -41,5 +41,11 @@ export const projects: ProjectType[] = [
     project_name: 'Unhide School',
     project_image: '/unhideschool.jpg',
     description: 'Unhide School is an online platform that connects students with talented teachers. It allows students to find their perfect teachers and teachers, and teachers to find their perfect students. I worked with development team as a frontend developer in the development of website and web application.',
+  },
+  {
+    url: 'https://space-mavericks.com/',
+    project_name: 'Space Mavericks',
+    project_image: '/space-mavericks.jpg',
+    description: 'I developed an interactive Web3 web page using Next.js and Three.js, creating immersive 3D experiences. I integrated REST APIs for seamless Web3 interactions and managed state with Redux and Context API. I also collaborated on backend development with Node.js and configured infrastructure using Docker and Caddy on Azure, ensuring scalability and reliability for production deployment.',
   }
 ]

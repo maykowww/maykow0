@@ -2,6 +2,7 @@ import { projects, type ProjectType } from "@/constant/projects";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { OpacityCard } from "./opacity-card";
 
 type ProjectCardProps = {
   project: ProjectType;
@@ -41,12 +42,12 @@ const Projects = () => {
       <p className=" tracking-[0.5em] text-center text-transparent font-light pb-5  bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500  text-1xl ">
         EXPLORE NOW
       </p>
-      <div className=" container mx-auto 2xl  ">
-        <div className="flex-row mt-7">
-          {projects.map((project) => (
-            <ProjectCard key={project.project_name} project={project} />
-          ))}
-        </div>
+      <div className="container flex flex-col gap-2 mx-auto">
+        {projects.map((project) => (
+          <OpacityCard key={project.project_name}>
+            <ProjectCard project={project} /> 
+          </OpacityCard>
+        ))}
       </div>
     </section>
   );
