@@ -15,7 +15,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
     target="_blank"
     className="z-[1]"
   >
-    <div className="flex-row flex mb-5">
+    <div className="flex flex-col gap-2 md:flex-row items-center mb-5">
       <Image
         src={project.project_image}
         height={150}
@@ -23,11 +23,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
         className="w-[150px] h-[150px]"
         alt={project.project_name}
       />
-      <div className="p-3">
-        <p className="text-white font-semibold text-xl">
+      <div className="p-3 md:text-left text-center">
+        <p className="text-white font-semibold text-2xl mb-2">
           {project.project_name}
         </p>
-        <p className="text-gray-500 text-[14px]">{project.description}</p>
+        <p className="text-gray-500 text-[16px]">{project.description}</p>
       </div>
     </div>
   </Link>

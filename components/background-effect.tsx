@@ -22,7 +22,7 @@ export const BackgroundEffect = ({ children }: BackgroundEffectProps) => {
     };
   }, []);
 
-  const movementFactor = 0.02;
+  const movementFactor = 0.008;
 
   const backgroundPosition = `right 0% top ${
     0 - scrollY * movementFactor

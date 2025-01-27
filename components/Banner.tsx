@@ -8,7 +8,7 @@ import { socialIcons } from "@/constant/social-icons";
 
 const Banner = () => {
   return (
-    <div className="flex flex-row items-center justify-center px-20 mt-[100px] z-[20] ">
+    <div className="container mx-auto flex flex-row items-center justify-center px-20 mt-[100px] z-[20] ">
       <div className="flex flex-col gap-5 justify-center  text-center">
         <div className="justify-center flex ">
           <Image
@@ -21,7 +21,7 @@ const Banner = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-6 mt-10 cursor-pointer animate-bounce tracking-tighter text-7xl font-semibold text-white max-w-[600px] w-auto h-auto">
+        <div className="flex flex-col gap-6 mt-10 cursor-pointer animate-bounce tracking-tighter text-5xl md:text-7xl font-semibold text-white max-w-[600px] w-auto h-auto">
           Maykow Victor
         </div>
         <div className="flex justify-center">
