@@ -27,11 +27,12 @@ export const BackgroundEffect = ({ children }: BackgroundEffectProps) => {
   const backgroundPosition = `right 0% top ${
     0 - scrollY * movementFactor
   }%`;
+  const backgroundSize = `${80 + scrollY * movementFactor}%`;
 
   return (
     <main
       className="h-full w-full bg-[url('/LooperGroup2.png')] bg-no-repeat transition-all duration-300 ease-out"
-      style={{ backgroundPosition }}
+      style={{ backgroundPosition, backgroundSize }}
     >
       {children}
     </main>
