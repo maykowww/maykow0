@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { OpacityCard } from "./opacity-card";
+import Link from "next/link";
+import { socialIcons } from "@/constant/social-icons";
 
 const Banner = () => {
   return (
@@ -37,20 +39,33 @@ const Banner = () => {
           />
         </div>
         <OpacityCard>
-          <p className="text-md text-gray-200 my-5 max-w-[600px]">
+          <p className="text-md text-gray-200 my-8 max-w-[600px]">
             Passionate Software Developer with knowledge in web and mobile
             development, dedicated to crafting elegant and user-friendly mobile
             and web applications.
           </p>
         </OpacityCard>
-        <div className="text-md flex justify-center">
-          <button
-            type="button"
-            onClick={() => window.open("mailto:maykowvictor9@gmail.com")}
-            className=" z-[1] padding-20  hover:bg-white rounded-3xl  text-white font-semibold hover:text-black py-3 px-10 border-[0.1px] border-white hover:border-transparent "
-          >
-            Contact Me
-          </button>
+        <div className="flex w-full justify-center mt-4">
+          {socialIcons.map((social) => {
+            return (
+              <Link
+                href={social.link}
+                rel="noopener noreferrer"
+                target="_blank"
+                key={social.alt}
+                className="z-[1]"
+              >
+                <Image
+                  src={social.image}
+                  height={30}
+                  width={30}
+                  alt={social.alt}
+                  sizes="100vw"
+                  className="mx-5"
+                />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

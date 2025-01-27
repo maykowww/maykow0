@@ -9,4 +9,9 @@ export const socialIcons = [
     image: "/LinkedIn.svg",
     alt: "Maykow Victor - Social Media",
   },
+  {
+    link: "mailto:maykowvictor9@gmail.com",
+    image: 'Mail.svg',
+    alt: 'Maykow Victor - Social Media',
+  }
 ];

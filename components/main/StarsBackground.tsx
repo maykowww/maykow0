@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, Suspense } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 // @ts-ignore
@@ -14,9 +14,26 @@ const StarBackground = (props: any) => {
     random.inSphere(new Float32Array(5000), { radius: 1.2 })
   );
 
+  const [speed] = useState(0.3);
+  const [paused, setPaused] = useState(false);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const pauseInterval = 30;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPaused((prev) => !prev);
+    }, pauseInterval * 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    if (!paused) {
+      setElapsedTime((prev) => prev + delta);
+
+      ref.current.rotation.x -= (delta / 10) * speed;
+      ref.current.rotation.y -= (delta / 15) * speed;
+    }
   });
 
   return (
@@ -27,7 +44,7 @@ const StarBackground = (props: any) => {
           color="#fff"
           size={0.002}
           sizeAttenuation={true}
-          dethWrite={false}
+          depthWrite={false}
         />
       </Points>
     </group>
@@ -37,9 +54,7 @@ const StarBackground = (props: any) => {
 const StarsCanvas = () => (
   <div className="w-full h-auto fixed inset-0 -z-[1] ">
     <Canvas camera={{ position: [0, 0, 1] }}>
-      <Suspense fallback={null}>
-        <StarBackground />
-      </Suspense>
+      <StarBackground />
     </Canvas>
   </div>
 );
